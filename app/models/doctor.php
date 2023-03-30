@@ -1,6 +1,6 @@
 <?php
 
-include 'app/librairies/Controller.php';
+include '../librairies/Controller.php';
 
 Class Doctor extends Controller{
     private $id;
