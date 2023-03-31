@@ -1,4 +1,4 @@
-CREATE DATABASE hospital.db;
+CREATE DATABASE hospital;
 CREATE TABLE doctors (
     id INT,
     name VARCHAR(255),

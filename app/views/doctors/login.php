@@ -15,7 +15,7 @@ else{
     // bouton submit pressé, je traite le formulaire
     $username = (isset($_POST['username'])) ? $_POST['username'] : '';
     $password = (isset($_POST['password'])) ? $_POST['password'] : '';
-    if (($username == "insacvl") && ($password == "azerty"))
+    if (($username == "insacvl") && ($password == "azerty")) //C'est pas bon ça faudrait utiliser les fonctions login et register quoique c'est ptet mieux de les appeler avec js en clic submit
     {
     $_SESSION['username'] = "insacvl";
     $_SESSION['password'] = "azerty";
@@ -25,7 +25,7 @@ else{
     }
     else
     {
-    // une erreur de saisie ...?
+    // une erreur de saisie
     echo '<p style="color:#FF0000; font-weight:bold;">Erreur de connexion.</p>';
     }
     }; // fin if (isset($_POST['submit']))
@@ -34,11 +34,12 @@ else{
     // Bouton submit non pressé j'affiche le formulaire
     echo '
     <form id="conn" method="post" action="">
-    <p><label for="username">Username :</label><input type="text" id="username" name="username" /></p>
+    <p><label for="username">Username doctor :</label><input type="text" id="username" name="username" /></p>
     <p><label for="password">Password :</label><input type="password" id="password" name="password" /></p>
     <p><input type="submit" id="submit" name="submit" value="Submit" /></p>
     </form>';
     }; // fin if (!isset($_POST['submit'])))
+    //Faire un autre espace pour register et surtout relier à la base de données sql?    
 }
 ?> 
 
